@@ -44,22 +44,20 @@
     ]
   },
   {
-        "label": "Recalls",
-        "menu_id": "pfb0",
-        "target": "rcb",
-        "url": "/interface/main/messages/messages.php?go=Recalls",
-        "children": [],
-        "requirement": 0,
-        "acl_req": [
-          "patients",
-          "appt"
-        ],
+    "label": "Recalls",
+    "menu_id": "pfb0",
+    "target": "rcb",
+    "url": "/interface/main/messages/messages.php?go=Recalls",
+    "children": [],
+    "requirement": 0,
+    "acl_req": [
+      "patients",
+      "appt"
+    ],
     "global_req_strict": [
       "!disable_rcb"
     ]
-
-   },
-
+  },
   {
     "label": "Messages",
     "menu_id": "msg0",
@@ -337,6 +335,46 @@
     "global_req": "enable_group_therapy"
   },
   {
+    "label": "Rounds",
+    "menu_id": "rou0",
+    "target": "rou",
+    "url": "/interface/rounds/sceduled_rounds.php",
+    "children": [],
+    "requirement": 0,
+    "acl_req": [],
+    "global_req_strict": []
+  },
+  {
+    "label": "BMS",
+    "menu_id": "bed0",
+    "target": "bed",
+    "children": [
+      {
+        "label": "Bed Allocation",
+        "menu_id": "",
+        "target": "",
+        "url": "/interface/BMS/bed_allocation.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": []
+      },
+      {
+        "label": "Edit BMS",
+        "menu_id": "",
+        "target": "",
+        "url": "/interface/BMS/BMS_edit.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": [
+          "admin",
+          "super"
+        ]
+      }
+    ],
+    "acl_req": [],
+    "global_req_strict": []
+  },
+  {
     "label": "Fees",
     "menu_id": "feeimg",
     "children": [
@@ -477,16 +515,16 @@
         "children": [],
         "requirement": 0,
         "acl_req": [
-            [
-                "acct",
-                "eob",
-                "write"
-            ],
-            [
-                "acct",
-                "bill",
-                "write"
-            ]
+          [
+            "acct",
+            "eob",
+            "write"
+          ],
+          [
+            "acct",
+            "bill",
+            "write"
+          ]
         ],
         "global_req": "auto_sftp_claims_to_x12_partner"
       }
@@ -513,9 +551,9 @@
     ],
     "requirement": 0,
     "acl_req": [
-    "menus",
-    "modle"
-  ]
+      "menus",
+      "modle"
+    ]
   },
   {
     "label": "Inventory",
@@ -536,23 +574,56 @@
         "url": "/interface/reports/destroyed_drugs_report.php",
         "children": [],
         "requirement": 0,
-          "acl_req": [
-            ["admin", "drugs"],
-            ["inventory", "reporting"]
+        "acl_req": [
+          [
+            "admin",
+            "drugs"
+          ],
+          [
+            "inventory",
+            "reporting"
           ]
+        ]
       }
     ],
     "requirement": 0,
     "acl_req": [
-      ["admin", "drugs"],
-      ["inventory", "lots"],
-      ["inventory", "purchases"],
-      ["inventory", "transfers"],
-      ["inventory", "adjustments"],
-      ["inventory", "consumption"],
-      ["inventory", "destruction"],
-      ["inventory", "sales"],
-      ["inventory", "reporting"]
+      [
+        "admin",
+        "drugs"
+      ],
+      [
+        "inventory",
+        "lots"
+      ],
+      [
+        "inventory",
+        "purchases"
+      ],
+      [
+        "inventory",
+        "transfers"
+      ],
+      [
+        "inventory",
+        "adjustments"
+      ],
+      [
+        "inventory",
+        "consumption"
+      ],
+      [
+        "inventory",
+        "destruction"
+      ],
+      [
+        "inventory",
+        "sales"
+      ],
+      [
+        "inventory",
+        "reporting"
+      ]
     ],
     "global_req": "inhouse_pharmacy"
   },
@@ -1241,19 +1312,19 @@
             ]
           },
           {
-            "label":"Weno Management",
-            "menu_id":"adm0",
-            "target":"adm",
-            "url":"/interface/weno/facilities.php",
-            "children":[],
-            "requirement":0,
+            "label": "Weno Management",
+            "menu_id": "adm0",
+            "target": "adm",
+            "url": "/interface/weno/facilities.php",
+            "children": [],
+            "requirement": 0,
             "acl_req": [
               "admin",
               "super"
             ],
-              "global_req": [
-                  "weno_rx_enable"
-              ]
+            "global_req": [
+              "weno_rx_enable"
+            ]
           }
         ],
         "requirement": 0,
@@ -1328,21 +1399,21 @@
             ],
             "global_req": "!disable_prescriptions"
           },
-            {
-                "label":"Prescription Log",
-                "menu_id":"rep0",
-                "target":"rep",
-                "url":"/interface/weno/rxlogmanager.php",
-                "children":[],
-                "requirement":0,
-                "acl_req": [
-                    "patients",
-                    "rx"
-                ],
-                "global_req": [
-                    "weno_rx_enable"
-                ]
-            },
+          {
+            "label": "Prescription Log",
+            "menu_id": "rep0",
+            "target": "rep",
+            "url": "/interface/weno/rxlogmanager.php",
+            "children": [],
+            "requirement": 0,
+            "acl_req": [
+              "patients",
+              "rx"
+            ],
+            "global_req": [
+              "weno_rx_enable"
+            ]
+          },
           {
             "label": "Patient List Creation",
             "menu_id": "rep0",
@@ -1771,8 +1842,14 @@
         ],
         "requirement": 0,
         "acl_req": [
-          ["admin", "drugs"],
-          ["inventory", "reporting"]
+          [
+            "admin",
+            "drugs"
+          ],
+          [
+            "inventory",
+            "reporting"
+          ]
         ],
         "global_req": "inhouse_pharmacy"
       },
@@ -2018,10 +2095,10 @@
         "children": [],
         "requirement": 0,
         "acl_req": [
-            "patients",
-            "docs"
+          "patients",
+          "docs"
         ]
-        },
+      },
       {
         "label": "Patient Education",
         "menu_id": "ped0",

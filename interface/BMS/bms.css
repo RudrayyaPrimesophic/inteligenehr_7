@@ -1,0 +1,226 @@
+button {
+    /* border-color: 1px solid var(--primary); */
+    /* background-color: var(--button_bg); */
+    /* text-align: center; */
+    /* border-radius: 5px; */
+    /* color: var(--primary) !important; */
+    /* font-weight: bold; */
+    padding: 5px 12px;
+    line-height: 25px;
+    text-decoration: none !important;
+    background: #f2f5f6 !important;
+    color: #06576a !important;
+    border: 1px solid #06576a;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif !important;
+    border-radius: 1px !important;
+}
+
+.mt-2 {
+    margin-top: 12px;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+.modal-header .close {
+    width: auto;
+    height: auto;
+}
+
+.add_floor_bms .modal-body {
+    height: 200px;
+}
+
+.add_wards_bms .modal-body {
+    height: 250px;
+}
+
+hr {
+    margin-bottom: 0px;
+}
+
+.bg-bms {
+    margin: 2px;
+    background: #ededed2b;
+    display: block;
+}
+
+.bed_card {
+    margin-bottom: 16px;
+}
+
+.bed_card .card-header {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0px;
+}
+
+.floor_name {
+    /* border: solid black; */
+    /* text-align: center; */
+    /* margin-left: 20px;
+    margin-top: 5px; */
+    /* border-radius: 4px; */
+    /* box-shadow: rgb(0 0 0 / 20%) 1px 6px 4px 1px; */
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #06576a;
+}
+
+.floor_name span {
+    color: #06576a;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.floor_name h5 {
+    margin: 5px 0px 5px 0px;
+    color: 06576a;
+}
+
+.ward_name {
+    /* text-align: center;
+    margin-left: 20px; */
+    margin-bottom: 15px;
+}
+
+.ward_name h5 {
+    /* border: solid; */
+    /* margin-left: 41%;
+    margin-right: 41%;
+    border-radius: 20px; */
+    color: white;
+    background: #06576a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.bed-assign_row {
+    margin: 0px 10px 0px 10px;
+    width: 100%;
+}
+
+.bed-assign_row .beds {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.bed-assign_row .beds p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.bed-assign_row .beds .assign_beds {
+    text-decoration: none;
+    color: #06576a;
+}
+
+.bed-assign_row .beds .male {
+    text-decoration: none;
+    color: rgb(42, 42, 148);
+}
+
+.bed-assign_row .beds .female {
+    text-decoration: none;
+    color: rgb(252, 133, 152);
+}
+
+.bed-assign_row .beds .other {
+    text-decoration: none;
+    color: orange;
+}
+
+.bed-assign_row .beds .lgbtq {
+    text-decoration: none;
+    color: purple;
+}
+
+hr {
+    background-color: #000000;
+    color: #000000;
+}
+
+.ward_name a {
+    text-decoration: none;
+}
+
+.floor_name a {
+    text-decoration: none;
+}
+
+.btn-close {
+    color: red;
+    border: solid;
+}
+
+.b-delete {
+    color: red;
+}
+
+.mt-4 {
+    margin-top: 25px;
+}
+
+
+/* tooltip */
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+[data-tooltip]:before {
+    border-bottom: .6em solid #09f;
+    border-bottom: .6em solid rgb(0, 153, 255);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    left: 20px;
+    margin-top: 1em;
+}
+
+[data-tooltip]:after {
+    text-align: left;
+    background-color: white;
+    border-radius: 7px;
+    color: #000000;
+    content: attr(data-tooltip-message);
+    left: 0;
+    margin-top: 1.5em;
+    padding: 5px 15px;
+    white-space: pre-wrap;
+    width: 300px;
+    z-index: 1;
+    font-size: 12px;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    display: block;
+}
+
+/* By Rudrayya For Reassign Of Bed 16-09-2022 Start */
+
+.active {
+    background-color: #06576a !important;
+    color: white !important;
+}
+
+/* By Rudrayya For Reassign Of Bed 16-09-2022 End */
